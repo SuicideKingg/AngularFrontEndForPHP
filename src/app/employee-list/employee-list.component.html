@@ -1,0 +1,27 @@
+<div class="container">
+    <h3>Employee List</h3>
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="th-sm">Employee Name</th>
+            <th class="th-sm">Address</th>
+            <th class="th-sm">Position</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tr *ngFor="let employee of employees">
+            <td>{{ employee.EmployeeName }}</td>
+            <td>{{ employee.EmployeeAddress }}</td>
+            <td>{{ employee.Position }}</td>
+            <td>
+              <div class="btn-group">
+                <button type="button" class="btn btn-warning" (click)="goToUpdate(employee.ID)">Update</button>
+                <button type="button" class="btn btn-danger" (click)="delete(employee.ID)">Delete</button>
+              </div>
+            </td>
+          </tr>
+      </table>
+      <button type="button" class="btn btn-primary" routerLink="/add-employee">Add new Employee</button>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+<div class="container">
+  <h3>Add New Employee</h3>
+  <div class="form-group">
+    <form [formGroup]="employeeForm" (ngSubmit)="onSubmit()">
+        <label>
+          Employee Name : 
+        </label>
+        <input type="text" formControlName="EmployeeName" class="form-control" placeholder="Employee Name"/>
+        <label>
+          Employee Address : 
+        </label>
+        <input type="text" formControlName="EmployeeAddress" class="form-control" placeholder="Address"/>
+        <label>
+          Position : 
+        </label>
+        <input type="text" formControlName="Position" class="form-control" placeholder="Position"/>
+        <div style="margin-top: 10px;">
+          <button class="btn btn-primary" type="submit">Add Employee</button>&nbsp;<button class="btn btn-danger" type="button" routerLink="/employee-list">Cancel</button>
+        </div>
+    </form>
+  </div>
+</div>
